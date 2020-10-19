@@ -1,7 +1,11 @@
 // OpenGLCourseApp.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-#include <stdio.h>
+
 #define GLEW_STATIC
+
+#include <stdio.h>
+#include <string.h>
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
@@ -10,6 +14,13 @@
 #define GLEW_STATIC
 // Window dimension
 const GLint WIDTH = 800, HEIGHT = 600;
+
+GLint VAO, VBO, shader;
+
+void createTriangle() {
+
+}
+
 
 int main()
 {

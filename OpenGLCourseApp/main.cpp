@@ -19,6 +19,12 @@ GLint VAO, VBO, shader;
 
 void createTriangle() {
 
+    GLfloat vertices[] = {
+    -1.0f, -1.5f, 0.0f,
+     1.0f, 1.0f, 0.0f,
+     0.0f,  1.0f, 0.0f
+    };
+
 }
 
 

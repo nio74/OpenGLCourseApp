@@ -1,12 +1,13 @@
 // OpenGLCourseApp.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 #include <stdio.h>
-
+#define GLEW_STATIC
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
 #include <iostream>
 
+#define GLEW_STATIC
 // Window dimension
 const GLint WIDTH = 800, HEIGHT = 600;
 
@@ -51,7 +52,7 @@ int main()
 
     glewExperimental = GL_TRUE;
 
-    if (!glewInit())
+    if (glewInit() != GLEW_OK)
     {
         printf("GlEW initialised  filed");
         glfwDestroyWindow(mainWindow);
@@ -66,7 +67,7 @@ int main()
     glViewport(0, 0, bufferWidth, bufferHeight);
 
 
-    // Loop until window closed
+    // Loop untill window closed
 
     while (!glfwWindowShouldClose(mainWindow))
     {
@@ -78,6 +79,8 @@ int main()
 
         glClearColor(1.0f, 0.f, 0.f,1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
+
+        glfwSwapBuffers(mainWindow);
 
     }
 
